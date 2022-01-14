@@ -1,5 +1,5 @@
 // Variables.
-// Es donde se almacenan los valores o tados, tales como:
+// Es donde se almacenan los valores o datos, tales como:
 // las strinsg, Numbers, Booleanos, Null,Undefined.
 // las cuales estan espuestas a ciertos cambios que se pueden presentar a lo largo del tiempo. 
 //Strings.
