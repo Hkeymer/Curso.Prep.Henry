@@ -197,10 +197,11 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
     var nuevAarray = [];
-    if(array > 0 && array < 200){
-     nuevAarray.push(array > 100)
-    }
-    return nuevAarray;
+    for (var i = 0; i < array ; i++)
+    if(array[i] <= 200){
+    nuevAarray.push(array[i] >100); 
+   }
+   return nuevAarray;
 }
 
 

@@ -3,6 +3,7 @@
 function deObjetoAmatriz(objeto){
   // Escribe una función que convierta un objeto en una matriz, donde cada elemento representa 
   // un par clave-valor en forma de matriz.
+
   //Ejemplo: 
   /*objeto({
       D: 1,
@@ -10,7 +11,14 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-}
+  var array = Object.keys(objeto). map(function (key){
+    return [Number(key), objeto[key]];
+  });
+   for( var i = 0; i < objeto.length; i++)
+     for( var r = 0; r < objeto[i].length; r++)
+   return array[i][r];
+  }
+
 
 
 function numberOfCharacters(string) {
@@ -18,7 +26,17 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var obj = {};
+
+  for(var i = 0; i < string.length; i++){
+    if(!obj[string[i]]){
+      obj[string[i]] = 0;
+    }  
+    obj[string[i]] += 1;
+  }
+  return obj;
 }
+
 
 
 function capToFront(s) {
@@ -26,6 +44,16 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var mayuscula = '';    var minuscula = '';
+    for (i = 0; i<s.length; i++){
+    if(s === s.toUpperCase()){
+      mayuscula = mayuscula + s.toUpperCase;
+      return (mayuscula.push());
+    }
+    else if(s === s.toLowerCase())
+      minuscula = minuscula + s.toLowerCase;
+      return (minuscula.push());   }  
+      return (mayuscula + minuscula)
 }
 
 
@@ -35,6 +63,11 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+   var revertir =  "";
+  for(var i = str.length-1; i >= 0; i--){
+     revertir += str[i];
+  }
+  return revertir;
 } 
 
 
@@ -43,6 +76,14 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  for(var i = 0; i < numero.length; i++)
+  for(var r = numero.length-1; r >= 0; r--)
+  if(numero[i] === numero[r]){
+    return "Es capicua";
+}
+if(numero[i] !== numero[r]){
+  return "No es capicua";
+}
 }
 
 
@@ -50,6 +91,7 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  
 }
 
 

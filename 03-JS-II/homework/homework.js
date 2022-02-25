@@ -171,13 +171,17 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  for( i = 2; i <= numero; i ++){
-    if( numero % i !== 0){
-      return true;
-    } 
-    else
-       return false;
+  if( numero < 2){
+    return false;
   }
+  for(i = 2; i <= numero; i++){
+  if(numero % i !== 0){
+    return true; 
+  }
+    if(numero % i === 0){
+      return false
+    }
+    }
 }
 
 function esVerdadero(valor){
@@ -218,13 +222,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var i = 0;
+  var i = 5;
   do{
-   i = i +5
-    numero = numero + i;
-  } while(i < 8);
+   i = i + 1;
+   numero = numero + i;
+  } while( i <= 9);
   return numero;
 }
+
 
 
 // No modificar nada debajo de esta línea
