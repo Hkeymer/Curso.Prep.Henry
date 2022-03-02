@@ -42,12 +42,11 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-var x = [];
-var array = s.split()
-for(var i = 0; i < array.length; i++)
-  if( array[i] === array.toUpperCase())
-  
-return array[i];
+  var array = Array.from(s)
+  var filtrarmayuculas = array.filter(x =>x === x.toUpperCase())
+  var filtrarminusculas = array.filter(e=>e === e.toLowerCase())
+  var concat = filtrarmayuculas.concat(filtrarminusculas)
+  return concat.join("")
 }
 
 
