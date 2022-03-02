@@ -196,12 +196,8 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-    var nuevAarray = [];
-    for (var i = 0; i < array ; i++)
-    if(array[i] <= 200){
-    nuevAarray.push(array[i] >100); 
-   }
-   return nuevAarray;
+    var mayoresQuecien = array.filter(x=>x>100)
+   return mayoresQuecien;
 }
 
 
